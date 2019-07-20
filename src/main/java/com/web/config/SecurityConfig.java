@@ -74,8 +74,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         registrations.add(CustomOAuth2Provider.KAKAO.getBuilder("kakao")
                 .clientId(kakaoClientId)
-                .clientSecret("test") //필요없는 값인데 null이면 실행이 안되도록 설정되어 있음
-                .jwkSetUri("test") //필요없는 값인데 null이면 실행이 안되도록 설정되어 있음
+                .clientSecret("Not Null")
+                .jwkSetUri("Not Null")
                 .build());
 
         return new InMemoryClientRegistrationRepository(registrations);
